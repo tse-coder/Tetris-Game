@@ -34,7 +34,7 @@ svg{
     } 
 }
 .game-over{
-    width: 100vh;
+    width: 100vw;
     height: 100vh;
     background:#697565b7;
     position: absolute;
