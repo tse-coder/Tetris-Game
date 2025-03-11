@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Game Font", verdana;
+}
+@font-face {
+    font-family: "Game Font";
+    src: url(./assets/fonts/AnkhSanctuary-PVK0B.ttf);
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #697565;
+}
+h1{
+    font-size: 50px;
+    color: #3C3D37;
+}
+canvas{
+    border:solid #ECDFCC 2px;
+    margin-top: 5px;
+}
+svg{
+    display: none;
+}
+@media (max-width:768px) {
+    svg{
+        display: block;
+        margin-block: 5px;
+        width: 300px;
+    } 
+}
+.game-over{
+    width: 100vh;
+    height: 100vh;
+    background:#697565b7;
+    position: absolute;
+    inset: 0 0 0 0;
+    place-items: center;
+}
+.display-result{
+    width: 300px;
+    height: 300px;
+    background-color:#3C3D37;
+    border-radius: 5px;
+    text-align: center;
+    color: #ECDFCC;
+}
+.display-result>*{
+    margin-top: 40px;
+}
+
+button{
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.start-page{
+    background: url(./assets/images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    inset:  0 0 0 0;
+    width: 100vw;
+    min-height: 100%;
+    display: grid;
+    place-items: center;
+}
+.start-page .message{
+    width: 320px;
+    height: 400px;
+    text-align: center;
+    background: #697565;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 20px;
+}
+
+.credit{
+    font-family: 'Courier New', Courier, monospace;
+}
+#score,#final-score,#high-score{
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: 800;
+}

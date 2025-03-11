@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <!-- start page -->
+
+    <div class="start-page">
+        <div class="message">
+            <h1>THE TETRIS GAME</h1>
+            <p class="credit">created by tsegaye</p>
+            <p>choose level</p>
+            <div class="levels">
+                <button onclick="startGame(500)">easy</button>
+                <button onclick="startGame(300)">medium</button>
+                <button onclick="startGame(200)">hard</button> 
+            </div>
+        </div>
+        
+    </div>
+
+    <!--  -->
+
+
+    <!-- game page -->
+
+    <h1>TETRIS</h1>
+    <canvas id="canvas"></canvas>
+    <p>score:  <span id="score"></span></p>
+
+    <!-- game control for smaller screens(devices with no key board) -->
+
+    <svg id="controlPad" width="300" height="100" viewBox="0 0 300 100">
+        <!-- Left Button -->
+        <circle onclick="moveLeft()" cx="40" cy="50" r="30" fill="#ECDFCC" id="left" />
+        <polygon points="25,50 45,35 45,65" fill="#181C14" />
+      
+        <!-- Down Button -->
+        <circle onclick="moveDown()" cx="110" cy="50" r="30" fill="#ECDFCC" id="down" />
+        <polygon points="95,40 125,40 110,65" fill="#181C14" />
+      
+        <!-- Right Button -->
+        <circle onclick="moveRight()" cx="180" cy="50" r="30" fill="#ECDFCC" id="right" />
+        <polygon points="195,50 175,35 175,65" fill="#181C14" />
+      
+        <!-- Rotate Button -->
+        <circle onclick="rotate()" cx="250" cy="50" r="30" fill="#ECDFCC" id="rotate" />
+        <circle cx="250" cy="50" r="15" fill="#181C14" />
+    </svg>
+
+    <!--  -->
+
+
+    <!-- after game over -->
+
+    <div style="display: none;" class="game-over">
+        <div class="display-result">
+            <h3>GAME OVER</h3>
+            <p>Score:  <span id="final-score"></span> </p>
+            <p>High score:  <span id="high-score"></span></p>
+            <button onclick="restart()">RESTART</button>
+        </div>
+    </div>
+    
+    <!--  -->
+
+    <script src="game.js"></script>
+</body>
+</html>
